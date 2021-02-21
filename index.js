@@ -1,12 +1,9 @@
-const Discord = require('discord.js'),
-    DisTube = require('distube'),
-    client = new Discord.Client(),
-    config = {
-        prefix: ".",
-        token: process.env.TOKEN || "ODEyNzUyNDM1NDQ4OTA1NzM4.YDFUsA.3zK9PwRTg6p4T0Jp3fg4DjoZCjw"
-    };
+const Discord = require('discord.js');
+const DisTube = require('distube');
+const client = new Discord.Client();
+const config = require('./config.json');
+    
 
-// Create a new DisTube
 const distube = new DisTube(client, { searchSongs: true, emitNewSongOnly: true });
 
 client.on('ready', () => {
